@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Route 66 Burgers</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <nav class="menu" aria-label="Menu principal">
+      <a href="#inicio" data-page="inicio">Página Inicial</a>
+      <a href="#cardapio" data-page="cardapio">Cardápio</a>
+      <a href="#lanchonete" data-page="lanchonete">A Lanchonete</a>
+      <a href="#servicos" data-page="servicos">Serviços</a>
+      <a class="perfil" href="#perfil" data-page="perfil">Meu perfil</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="brand">
+      <img src="assets/img/interface/logo_route66_burgers.png" alt="Route 66 Burgers">
+    </section>
+
+    <section id="page-inicio" class="page active">
+      <div class="home-layout">
+        <div class="home-list">
+          <div class="section-title"><span>▲</span><h1>Novidades</h1><i></i></div>
+          <div class="cards row" id="home-novidades"></div>
+          <div class="section-title"><span>▲</span><h1>Famosinhos</h1><i></i></div>
+          <div class="cards row" id="home-famosos"></div>
+        </div>
+        <aside class="promo"><img src="assets/img/interface/banner_de_volta_para_os_anos_80_marty_mcfly.png" alt="Combo Marty McFly"><button class="btn" data-open="marty-mcfly">Ver detalhes</button></aside>
+      </div>
+    </section>
+
+    <section id="page-cardapio" class="page">
+      <div class="catalog">
+        <div class="catalog-main" id="catalog-main"></div>
+        <aside class="details" id="details"></aside>
+      </div>
+    </section>
+
+    <section id="page-finalizar" class="page">
+      <div class="checkout-screen">
+        <article class="selected-product" id="checkout-product"></article>
+        <form class="checkout-panel">
+          <fieldset><legend>Retirada ou entrega</legend><label><input type="radio" name="recebimento" checked> Entrega - Receba seu pedido onde estiver.</label><label><input type="radio" name="recebimento"> Retirada no local - Busque seu pedido em nossa lanchonete.</label><input placeholder="Digite seu endereço" value="Av. Jonas Pavannani, 1982 - Franca/SP"></fieldset>
+          <fieldset><legend>Pagamento</legend><label><input type="radio" name="pagamento" checked> Cartão de crédito</label><label><input type="radio" name="pagamento"> Cartão de débito</label><label><input type="radio" name="pagamento"> Pix</label><label><input type="radio" name="pagamento"> Dinheiro</label><label><input type="radio" name="pagamento"> Vale-refeição</label></fieldset>
+          <button type="button" class="pay" data-page-go="pedidos"><span>Finalizar e pagar</span><strong id="checkout-total">R$ 114,60</strong></button>
+          <div class="accessibility"><button type="button">♿ Acessibilidade</button><button type="button" id="contrast">Alto contraste</button><button type="button" id="less">A-</button><button type="button" id="more">A+</button></div>
+        </form>
+      </div>
+    </section>
+    <section id="page-lanchonete" class="page">
+      <div class="about-static-wrap" aria-label="Página A Lanchonete">
+        <img class="about-static-img" src="assets/img/interface/pagina_lanchonete_estatica.png" alt="Página sobre a lanchonete Route 66 Burgers com informações de endereço, horário, contato e características do ambiente">
+        <a class="about-location-btn" href="https://www.google.com/maps/search/Route+66+Burgers+Franca+SP" target="_blank" rel="noopener">Ver localização</a>
+      </div>
+    </section>
+
+
+    <section id="page-login" class="page"><div class="login"><h1>Entre na sua Conta</h1><label>Email:<input value="exemplo@gmail.com"></label><label>Senha:<input type="password" value="123456"></label><button class="btn">Entrar</button><p>ou</p><button class="btn outline">Criar Conta</button></div></section>
+
+    <section id="page-perfil" class="page"><div class="profile-grid"><aside class="profile-card"><div class="avatar"></div><h1>David Hasselhoff</h1><p>Cliente Nível Cruiser</p><button>Editar perfil</button><button>Sair da conta</button></aside><section class="profile-info"><div class="profile-box"><h2>Meus pedidos</h2><div id="profile-orders"></div></div><div class="two"><div class="profile-box"><h2>Endereço padrão</h2><p>Casa<br>Av. Jonas Pavannani, 1982<br>Franca - SP</p></div><div class="profile-box"><h2>Nível de Cliente</h2><p>Você está no nível <b>Cruiser</b></p><div class="bar"><span></span></div><p>1.758 / 2.500 pts</p></div></div></section></div></section>
+
+    <section id="page-pedidos" class="page"><div class="orders"><h1>Meus pedidos</h1><p>Acompanhe o histórico dos seus pedidos.</p><div id="orders-list"></div></div></section>
+
+    <section id="page-servicos" class="page"><div class="loyalty"><h1>Programa de Fidelidade</h1><p>Quanto mais você pede, mais pontos acumula e mais recompensas desbloqueia.</p><div class="member">ROUTE 66<br><b>Cruiser</b></div><div class="bar"><span></span></div><div class="coupons"><article><b>50% OFF</b><p>Novidades</p></article><article><b>R$ 10 OFF</b><p>Pedidos acima de R$ 60</p></article><article><b>FRETE GRÁTIS</b><p>Pedidos acima de R$ 50</p></article></div></div></section>
+
+    <section id="page-guiche" class="page"><div class="kiosk"><aside><button class="active" data-kcat="Combos">★ 🍔 Combos</button><button data-kcat="Famosinhos">🍔 Lanches</button><button data-kcat="Acompanhamentos">🍟 Acompanhamentos</button><button data-kcat="Bebidas">🥤 Bebidas</button><button data-kcat="Sobremesas">🍨 Sobremesas</button><button class="see" data-page-go="finalizar">Ver pedido ›</button><small>66<br>Dúvidas? Chame nosso time</small></aside><main><div class="kiosk-top"><h1>Cardápio completo</h1><div><button id="light">Modo claro</button><button id="dark">Modo escuro</button></div></div><div id="kiosk-grid" class="kiosk-grid"></div><div class="accessibility"><button>♿ Acessibilidade</button><button id="contrast2">Alto contraste</button><button id="less2">A-</button><button id="more2">A+</button></div></main></div></section>
+  </main>
+
+  <footer><div><img src="assets/img/interface/logo_route66_burgers.png" alt="Route 66 Burgers"><p>Sabor retrô, combos lendários e uma viagem de volta para os anos 80!</p></div><div><h2>Contato</h2><p>@Route66burger<br>(16) 99166-1985</p></div><div><h2>Quem Somos</h2><p>A lanchonete<br>Trabalhe conosco<br>Privacidade</p></div></footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
